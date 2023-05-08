@@ -22,19 +22,25 @@ echo "Space              => toggle selection"
 echo "Enter              => confirm selection"
 echo 
 
-# Usage Example
-my_options=( "Option0" "Option2" "Option3")
-selection=( "true" "false" "true")
-selection1=()
-selection2=("true" "true" "true" "true" "true" "true" "true")
+# # Usage Example
+# my_options=( "Option0" "Option2" "Option3")
+# selection=( "true" "false" "true")
+# selection1=()
+# selection2=("true" "true" "true" "true" "true" "true" "true")
 
-echo "First options"
-multiselect result my_options selection2
-echo "Second Options"
-multiselect result my_options selection2
+# echo "First options"
+# multiselect result my_options selection2
+# echo "Second Options"
+# multiselect result my_options selection2
 
-idx=-1
-for option in "${my_options[@]}"; do
-    echo -e "$option\t=> ${result[idx]}"
-    ((idx++))
-done
+# idx=-1
+# for option in "${my_options[@]}"; do
+#     echo -e "$option\t=> ${result[idx]}"
+#     ((idx++))
+# done
+
+echo "Toggled selections are going to be installed."
+echo "-- Misc --"
+misc_options=( "fd" "ripgrep" "latex")
+misc_default=( "true" "true" "false")
+multiselect misc_result misc_options misc_default
