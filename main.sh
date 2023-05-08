@@ -11,7 +11,7 @@
 #
 # Thanks for https://unix.stackexchange.com/questions/146570/arrow-key-enter-menu/673436#673436 making this project possible.
 #
-# ---
+# ---------------------------------------------------------------------------------------------------------------------------
 
 source ./menu.sh
 
