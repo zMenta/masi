@@ -40,7 +40,13 @@ echo
 # done
 
 echo "Toggled selections are going to be installed."
+
 echo "-- Misc --"
 misc_options=( "fd" "ripgrep" "latex")
 misc_default=( "true" "true" "false")
 multiselect misc_result misc_options misc_default
+
+echo "-- Utility --"
+utility_options=("flameshot" "htop")
+utility_default=("true" "true" )
+multiselect utility_result utility_options utility_default
