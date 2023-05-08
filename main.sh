@@ -15,6 +15,13 @@
 
 source ./menu.sh
 
+echo 
+echo "k or up_arrow      => UP"
+echo "j or down_arrow    => DOWN"
+echo "Space              => toggle selection"
+echo "Enter              => confirm selection"
+echo 
+
 # Usage Example
 my_options=( "Option0" "Option2" "Option3")
 selection=( "true" "false" "true")
