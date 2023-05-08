@@ -109,21 +109,3 @@ function multiselect {
 
     eval $return_value='("${selected[@]}")'
 }
-# MultiSelect End# 
-
-# Usage Example
-my_options=( "Option1" "Option2" "Option3")
-selection=( "true" "false" "true")
-selection2=()
-selection3=("true" "true" "true" "true" "true" "true" "true")
-
-echo "First options"
-multiselect result my_options selection3
-echo "Second Options"
-multiselect result my_options selection3
-
-idx=0
-for option in "${my_options[@]}"; do
-    echo -e "$option\t=> ${result[idx]}"
-    ((idx++))
-done
