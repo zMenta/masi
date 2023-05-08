@@ -39,6 +39,7 @@ echo
 #     ((idx++))
 # done
 
+echo "* The following script requires yay"
 echo "Toggled selections are going to be installed."
 
 echo "-- Misc --"
