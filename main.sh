@@ -43,7 +43,7 @@ echo "* The following script requires yay"
 echo "Toggled selections are going to be installed."
 
 echo "-- Misc --"
-misc_options=( "fd" "ripgrep" "latex")
+misc_options=( "fd" "ripgrep" "texlive-most")
 misc_default=( "true" "true" "false")
 multiselect misc_result misc_options misc_default
 
@@ -52,7 +52,7 @@ utility_options=("flameshot" "htop")
 utility_default=("true" "true" )
 multiselect utility_result utility_options utility_default
 
-
+# Make this it own function, passing as arguments the options and result.
 for ((i=0; i<${#misc_options[@]}; i++)); do
     if [[ ${misc_result[i]} == "true" ]]; then
         echo "Installing ${misc_options[i]}"
