@@ -59,8 +59,7 @@ echo "Enter              => confirm selection"
 echo 
 
 echo "* The following script requires yay"
-echo "Toggled selections are going to be installed."
-echo
+echo "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
 
 echo "-- Misc --"
 misc_options=( "fd" "ripgrep" "texlive-most")
@@ -71,6 +70,11 @@ echo "-- Utility --"
 utility_options=("flameshot" "htop")
 utility_default=("true" "true" )
 multiselect utility_result utility_options utility_default
+
+echo "-- Development --"
+dev_options=("neovim" "vim" "emacs-nativecomp" "vscodium-bin" "godot" "rust")
+dev_defaults=("true" "true" "false" "false" "true" "true")
+multiselect dev_result dev_options dev_defaults
 
 echo "--------------------------------------------------------------------------------------"
 echo "   Installation Began, you might be asked for your sudo password to proceed."
@@ -83,6 +87,7 @@ printDone
 
 installOptions misc_options misc_result
 installOptions utility_options utility_result
+installOptions dev_options dev_result
 
 echo "-------------------------"
 echo "  Installation Complete"
