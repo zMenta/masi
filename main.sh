@@ -67,8 +67,8 @@ browser_defaults=("true" "false")
 multiselect browser_result browser_options browser_defaults
 
 echo "-- Misc --"
-misc_options=( "fd" "ripgrep" "npm" "texlive-most")
-misc_default=( "true" "true" "true" "false")
+misc_options=( "alacritty" "fd" "ripgrep" "npm" "texlive-most")
+misc_default=( "true" "true" "true" "true" "false")
 multiselect misc_result misc_options misc_default
 
 echo "-- Utility --"
