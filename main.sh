@@ -36,7 +36,7 @@ function installOptions {
 
     for ((i=0; i<${#options[@]}; i++)); do
         if [[ ${result[i]} == "true" ]]; then
-            printInstallStatus ${options[1]}
+            printInstallStatus ${options[i]}
             eval yay -S --noconfirm "${options[i]}"
             printDone
         fi
@@ -75,6 +75,11 @@ multiselect utility_result utility_options utility_default
 echo "--------------------------------------------------------------------------------------"
 echo "   Installation Began, you might be asked for your sudo password to proceed."
 echo "--------------------------------------------------------------------------------------"
+
+echo
+echo "$(tput setaf $BLUE)-- Updating the system --$(tput setaf $WHITE)"
+yay -Syu --noconfirm
+printDone
 
 installOptions misc_options misc_result
 installOptions utility_options utility_result
