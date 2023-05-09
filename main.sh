@@ -41,25 +41,9 @@ echo "Space              => toggle selection"
 echo "Enter              => confirm selection"
 echo 
 
-# # Usage Example
-# my_options=( "Option0" "Option2" "Option3")
-# selection=( "true" "false" "true")
-# selection1=()
-# selection2=("true" "true" "true" "true" "true" "true" "true")
-
-# echo "First options"
-# multiselect result my_options selection2
-# echo "Second Options"
-# multiselect result my_options selection2
-
-# idx=-1
-# for option in "${my_options[@]}"; do
-#     echo -e "$option\t=> ${result[idx]}"
-#     ((idx++))
-# done
-
 echo "* The following script requires yay"
 echo "Toggled selections are going to be installed."
+echo
 
 echo "-- Misc --"
 misc_options=( "fd" "ripgrep" "texlive-most")
@@ -70,5 +54,10 @@ echo "-- Utility --"
 utility_options=("flameshot" "htop")
 utility_default=("true" "true" )
 multiselect utility_result utility_options utility_default
+
+echo "--------------------------------------------------------------------------------------"
+echo "   Installation Began, you might be asked for your sudo password to proceed."
+echo "--------------------------------------------------------------------------------------"
+echo 
 
 installOptions misc_options misc_result
