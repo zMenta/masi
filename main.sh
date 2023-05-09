@@ -62,8 +62,8 @@ echo "* The following script requires yay"
 echo "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
 
 echo "-- Misc --"
-misc_options=( "fd" "ripgrep" "texlive-most")
-misc_default=( "true" "true" "false")
+misc_options=( "fd" "ripgrep" "npm" "texlive-most")
+misc_default=( "true" "true" "true" "false")
 multiselect misc_result misc_options misc_default
 
 echo "-- Utility --"
