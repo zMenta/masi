@@ -51,3 +51,11 @@ echo "-- Utility --"
 utility_options=("flameshot" "htop")
 utility_default=("true" "true" )
 multiselect utility_result utility_options utility_default
+
+
+for ((i=0; i<${#misc_options[@]}; i++)); do
+    if [[ ${misc_result[i]} == "true" ]]; then
+        echo "Installing ${misc_options[i]}"
+        eval yay -S --noconfirm "${misc_options[i]}"
+    fi
+done
