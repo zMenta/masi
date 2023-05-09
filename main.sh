@@ -72,8 +72,8 @@ misc_default=( "true" "true" "true" "false")
 multiselect misc_result misc_options misc_default
 
 echo "-- Utility --"
-utility_options=("flameshot" "htop")
-utility_default=("true" "true" )
+utility_options=("flameshot" "htop" "btop" )
+utility_default=("true" "true" "false")
 multiselect utility_result utility_options utility_default
 
 echo "-- Development --"
@@ -81,6 +81,25 @@ dev_options=("neovim" "vim" "emacs-nativecomp" "vscodium-bin" "godot" "rust")
 dev_defaults=("true" "true" "false" "false" "true" "true")
 multiselect dev_result dev_options dev_defaults
 
+echo "-- Games and Communication --"
+gc_options=("discord" "steam")
+gc_defaults=("true" "false")
+multiselect gc_result gc_options gc_defaults
+
+echo "-- Multimidia Tools --"
+tool_options=(
+    "audacity" "lmms"
+    "obs-studio" 
+    "krita" "gimp" "aseprite" "pureref" 
+    "blender" "blockbench"
+    )
+tool_defaults=(
+    "false" "false"
+    "true"
+    "true" "false" "false" "false"
+    "false" "false"
+    )
+multiselect tool_result tool_options tool_defaults
 
 echo "--------------------------------------------------------------------------------------"
 echo "   Installation Began, you might be asked for your sudo password to proceed."
@@ -95,6 +114,8 @@ installOptions browser_options browser_result
 installOptions misc_options misc_result
 installOptions utility_options utility_result
 installOptions dev_options dev_result
+installOptions gc_options gc_result
+installOptions tool_options tool_result
 
 echo "-------------------------"
 echo "  Installation Complete"
