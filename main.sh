@@ -13,6 +13,25 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------------
 
+function installOptions {
+    local -n options=$1
+    local -n result=$2
+
+    for ((i=0; i<${#options[@]}; i++)); do
+        if [[ ${result[i]} == "true" ]]; then
+            echo "Installing ${options[i]}"
+            eval yay -S --noconfirm "${options[i]}"
+        fi
+    done
+}
+
+
+# TODO
+# 1 - Single selection menu
+# 2 - Warns that yay is necessary and asks to install it. Check Chris Titus hyprland install
+# 3 - Finish Install
+# 4 - On final selection have the following message "The toggled options are going to be installed, proceed?"
+
 source ./menu.sh
 
 echo 
@@ -52,10 +71,4 @@ utility_options=("flameshot" "htop")
 utility_default=("true" "true" )
 multiselect utility_result utility_options utility_default
 
-# Make this it own function, passing as arguments the options and result.
-for ((i=0; i<${#misc_options[@]}; i++)); do
-    if [[ ${misc_result[i]} == "true" ]]; then
-        echo "Installing ${misc_options[i]}"
-        eval yay -S --noconfirm "${misc_options[i]}"
-    fi
-done
+installOptions misc_options misc_result
