@@ -13,18 +13,35 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------------
 
+declare RED=1
+declare GREEN=2
+declare BLUE=4
+declare WHITE=7
+
+function printInstallStatus {
+    local text=$1
+
+    echo
+    echo "$(tput setaf $BLUE)-- installing $text --$(tput setaf $WHITE)"
+}
+
+function printDone {
+    echo "$(tput setaf $GREEN)-- done --$(tput setaf $WHITE)"
+    echo
+}
+
 function installOptions {
     local -n options=$1
     local -n result=$2
 
     for ((i=0; i<${#options[@]}; i++)); do
         if [[ ${result[i]} == "true" ]]; then
-            echo "Installing ${options[i]}"
+            printInstallStatus ${options[1]}
             eval yay -S --noconfirm "${options[i]}"
+            printDone
         fi
     done
 }
-
 
 # TODO
 # 1 - Single selection menu
@@ -58,6 +75,11 @@ multiselect utility_result utility_options utility_default
 echo "--------------------------------------------------------------------------------------"
 echo "   Installation Began, you might be asked for your sudo password to proceed."
 echo "--------------------------------------------------------------------------------------"
-echo 
 
 installOptions misc_options misc_result
+installOptions utility_options utility_result
+
+echo "-------------------------"
+echo "  Installation Complete"
+echo "-------------------------"
+echo
