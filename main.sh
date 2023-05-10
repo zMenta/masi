@@ -13,22 +13,9 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------------
 
-declare RED=1
-declare GREEN=2
-declare BLUE=4
-declare WHITE=7
-
-function printInstallStatus {
-    local text=$1
-
-    echo
-    echo "$(tput setaf $BLUE)-- installing $text --$(tput setaf $WHITE)"
-}
-
-function printDone {
-    echo "$(tput setaf $GREEN)-- done --$(tput setaf $WHITE)"
-    echo
-}
+function printInstallStatus { printf "\n\e[38;5;45m-- installing $1 --\e[0m\n"; }
+function printDone { printf "\e[38;5;46m-- done --\e[0m\n"; }
+	
 
 function installOptions {
     local -n options=$1
@@ -105,8 +92,7 @@ echo "--------------------------------------------------------------------------
 echo "   Installation Began, you might be asked for your sudo password to proceed."
 echo "--------------------------------------------------------------------------------------"
 
-echo
-echo "$(tput setaf $BLUE)-- Updating the system --$(tput setaf $WHITE)"
+printf "\n\e[38;5;45m-- Updating the system --\e[0m\n"
 yay -Syu --noconfirm
 printDone
 
