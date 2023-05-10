@@ -13,16 +13,18 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------------
 
-function multiselect {
-    # little helpers for terminal print control and key input
-    ESC=$( printf "\033")
-    cursor_blink_on()   { printf "$ESC[?25h"; }
-    cursor_blink_off()  { printf "$ESC[?25l"; }
-    cursor_to()         { printf "$ESC[$1;${2:-1}H"; }
-    print_inactive()    { printf "$2   $1 "; }
-    print_active()      { printf "$2  $ESC[7m $1 $ESC[27m"; }
-    get_cursor_row()    { IFS=';' read -sdR -p $'\E[6n' ROW COL; echo ${ROW#*[}; }
 
+# little helpers for terminal print control and key input
+ESC=$( printf "\033")
+cursor_blink_on()   { printf "$ESC[?25h"; }
+cursor_blink_off()  { printf "$ESC[?25l"; }
+cursor_to()         { printf "$ESC[$1;${2:-1}H"; }
+print_inactive()    { printf "$2   $1 "; }
+print_active()      { printf "$2  $ESC[7m $1 $ESC[27m"; }
+get_cursor_row()    { IFS=';' read -sdR -p $'\E[6n' ROW COL; echo ${ROW#*[}; }
+
+
+function multiselect {
     local return_value=$1
     local -n options=$2
     local -n defaults=$3
@@ -118,15 +120,6 @@ function multiselect {
 # echo $test_result
 
 function singleselect {
-    # little helpers for terminal print control and key input
-    ESC=$( printf "\033")
-    cursor_blink_on()   { printf "$ESC[?25h"; }
-    cursor_blink_off()  { printf "$ESC[?25l"; }
-    cursor_to()         { printf "$ESC[$1;${2:-1}H"; }
-    print_inactive()    { printf "$2   $1 "; }
-    print_active()      { printf "$2  $ESC[7m $1 $ESC[27m"; }
-    get_cursor_row()    { IFS=';' read -sdR -p $'\E[6n' ROW COL; echo ${ROW#*[}; }
-
     local return_value=$1
     local -n options=$2
 
