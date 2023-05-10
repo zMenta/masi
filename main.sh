@@ -30,11 +30,12 @@ function installOptions {
     done
 }
 
-# TODO
-# 1 - Single selection menu
+### TODO
+# DONE 1 - Single selection menu
 # 2 - Warns that yay is necessary and asks to install it. Check Chris Titus hyprland install
-# 3 - Finish Install
+# DONE 3 - Finish Install
 # 4 - On final selection have the following message "The toggled options are going to be installed, proceed?"
+# 5 - Create on the multiselect a description=("") parameter? -> on print_option $text $description
 
 source ./menu.sh
 
@@ -47,6 +48,7 @@ echo
 
 echo "* The following script requires yay"
 echo "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
+echo
 
 echo "-- Browsers --"
 browser_options=("brave-bin" "firefox")
