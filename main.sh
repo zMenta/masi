@@ -16,7 +16,7 @@
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
 function printSucess { printf "\e[38;5;46m-- $1 --\e[0m\n"; }
-	
+function printError { printf "\e[38;5;203m-- $1 --\e[0m\n"; }
 
 function installOptions {
     local -n options=$1
@@ -30,6 +30,9 @@ function installOptions {
         fi
     done
 }
+
+# Options for yes or no questions
+yn_options=("yes" "no")
 
 ### TODO
 # DONE 1 - Single selection menu
@@ -47,14 +50,30 @@ echo "Space              => toggle selection"
 echo "Enter              => confirm selection"
 echo 
 
-# printStatus "Checking for yay"
-# ISYAY=/sbin/yay
-# if [ -f "$ISYAY" ]; then 
-# 	printStatus "yay was located"
-# fi
-#
-echo "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
+printStatus "Checking for yay"
+ISYAY=/sbin/yay
+if [ -f "$ISYAY" ]; then 
+	printSucess "yay was located, procceding"
+else
+	printWarning "yay was NOT located"
+	echo " - Would you like to install yay?"
+
+	singleselect yn_result yn_options
+	if [[ $yn_result == "yes" ]]; then
+		printStatus "installing yay"
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+        makepkg -si --noconfirm
+        cd ..
+		printSucess "done"
+	else
+		printError "yay is required for this script, exiting"
+		exit
+	fi
+fi
+
 echo
+printWarning "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
 
 echo "-- Browsers --"
 browser_options=("brave-bin" "firefox")
