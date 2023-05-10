@@ -13,8 +13,9 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------------
 
-function printInstallStatus { printf "\n\e[38;5;45m-- installing $1 --\e[0m\n"; }
-function printDone { printf "\e[38;5;46m-- done --\e[0m\n"; }
+function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
+function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
+function printSucess { printf "\e[38;5;46m-- $1 --\e[0m\n"; }
 	
 
 function installOptions {
@@ -23,9 +24,9 @@ function installOptions {
 
     for ((i=0; i<${#options[@]}; i++)); do
         if [[ ${result[i]} == "true" ]]; then
-            printInstallStatus ${options[i]}
+            printStatus "installing ${options[i]}"
             eval yay -S --noconfirm "${options[i]}"
-            printDone
+            printSucess "done"
         fi
     done
 }
@@ -39,14 +40,19 @@ function installOptions {
 
 source ./menu.sh
 
-echo 
+printStatus "Commands"
 echo "k or up_arrow      => UP"
 echo "j or down_arrow    => DOWN"
 echo "Space              => toggle selection"
 echo "Enter              => confirm selection"
 echo 
 
-echo "* The following script requires yay"
+# printStatus "Checking for yay"
+# ISYAY=/sbin/yay
+# if [ -f "$ISYAY" ]; then 
+# 	printStatus "yay was located"
+# fi
+#
 echo "Toggled selections are going to be installed. If in doubt, please check the packages in archlinux.org"
 echo
 
@@ -94,9 +100,9 @@ echo "--------------------------------------------------------------------------
 echo "   Installation Began, you might be asked for your sudo password to proceed."
 echo "--------------------------------------------------------------------------------------"
 
-printf "\n\e[38;5;45m-- Updating the system --\e[0m\n"
+printStatus "Updating the system"
 yay -Syu --noconfirm
-printDone
+printSucess "System updated"
 
 installOptions browser_options browser_result
 installOptions misc_options misc_result
