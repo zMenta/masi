@@ -81,8 +81,8 @@ browser_defaults=("true" "false")
 multiselect browser_result browser_options browser_defaults
 
 echo "-- Misc --"
-misc_options=( "alacritty" "fd" "ripgrep" "npm" "texlive-most")
-misc_default=( "true" "true" "true" "true" "false")
+misc_options=( "alacritty" "fd" "ripgrep" "npm" "netcat" "texlive-most")
+misc_default=( "true" "true" "true" "true" "netcat" "false")
 multiselect misc_result misc_options misc_default
 
 echo "-- Utility --"
@@ -139,5 +139,20 @@ installOptions tool_options tool_result
 
 echo "-------------------------"
 echo "  Installation Complete"
+echo "-------------------------"
+echo
+
+echo " - Would you like to install menta configuration files?"
+echo " If in doubt, please consult https://github.com/zMenta/config-files"
+singleselect yn_result yn_options
+if [[ $yn_result == "yes" ]]; then
+	echo " - Select the configurations you want to apply"
+	config_options=("nvim" "doom emacs + menta config files" "godot" "bashrc" "endeavourOS i3wm")
+	config_defaults=("true" "true" "true" "true" "false")
+	multiselect config_result config_options config_defaults
+fi
+
+echo "-------------------------"
+echo "  Script Complete"
 echo "-------------------------"
 echo
