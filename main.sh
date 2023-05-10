@@ -115,6 +115,13 @@ tool_defaults=(
     )
 multiselect tool_result tool_options tool_defaults
 
+echo " - All the selected items are going to be installed, proceed with installation?"
+singleselect yn_result yn_options
+if [[ $yn_result == "no" ]]; then
+	printError "Installation cancelled, exiting"
+	exit
+fi
+
 echo "--------------------------------------------------------------------------------------"
 echo "   Installation Began, you might be asked for your sudo password to proceed."
 echo "--------------------------------------------------------------------------------------"
