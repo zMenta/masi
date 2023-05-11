@@ -172,7 +172,7 @@ function singleselect {
 
         # user key control
         case `key_input` in
-            enter)  print_options -1; break;;
+            enter)  print_options $active; break;;
             up)     ((active--));
                     if [ $active -lt 0 ]; then active=$((${#options[@]} - 1)); fi;;
             down)   ((active++));
