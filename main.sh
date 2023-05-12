@@ -86,8 +86,8 @@ misc_default=( "true" "true" "true" "true" "netcat" "false")
 multiselect misc_result misc_options misc_default
 
 echo "-- Utility --"
-utility_options=("flameshot" "htop" "btop" "arandr")
-utility_default=("true" "true" "false" "false")
+utility_options=("flameshot" "htop" "zellij" "btop" "arandr")
+utility_default=("true" "true" "true" "false" "false")
 multiselect utility_result utility_options utility_default
 
 echo "-- Development --"
