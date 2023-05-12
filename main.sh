@@ -150,6 +150,19 @@ if [[ $yn_result == "yes" ]]; then
 	config_options=("nvim" "doom emacs + menta config files" "godot" "bashrc" "endeavourOS i3wm")
 	config_defaults=("true" "true" "true" "true" "false")
 	multiselect config_result config_options config_defaults
+
+    for ((i=0; i<${#config_options[@]}; i++)); do
+		if [[ ${config_result[i]} == "false" ]]; then
+			continue
+		fi 
+
+		case ${config_options[i]} in
+			nvim) echo "nvim";;
+			godot) echo "godot";;
+		esac
+
+	done
+	
 fi
 
 echo "-------------------------"
