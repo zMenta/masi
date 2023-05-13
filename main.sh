@@ -147,18 +147,37 @@ echo " If in doubt, please consult https://github.com/zMenta/config-files"
 singleselect yn_result yn_options
 if [[ $yn_result == "yes" ]]; then
 	echo " - Select the configurations you want to apply"
-	config_options=("nvim" "doom emacs + menta config files" "godot" "bashrc" "endeavourOS i3wm")
+	config_options=("nvim" "doom emacs" "godot" "bashrc" "endeavourOS i3wm")
 	config_defaults=("true" "true" "true" "true" "false")
 	multiselect config_result config_options config_defaults
 
+	config_log=("")
     for ((i=0; i<${#config_options[@]}; i++)); do
 		if [[ ${config_result[i]} == "false" ]]; then
 			continue
 		fi 
 
 		case ${config_options[i]} in
-			nvim) echo "nvim";;
-			godot) echo "godot";;
+			nvim) echo "nvim WIP";;
+
+			godot) echo "godot"
+				printStatus "Applying godot config"
+				mkdir ~/godot
+				mkdir ~/godot/projects
+				printSucess "done"
+				;;
+
+			"doom emacs")
+				printStatus "Installing Doom emacs"
+				git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+				~/.emacs.d/bin/doom install -!
+				config_log+="Don't forget to run doom sync"
+				printSucess "done"
+				;;
+
+			# bashrc)
+			# 	printStatus "";;
+
 		esac
 
 	done
