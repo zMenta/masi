@@ -142,7 +142,7 @@ echo "  Installation Complete"
 echo "-------------------------"
 echo
 
-echo " - Would you like to install menta configuration files?"
+echo " - Would you like to install Menta configuration files?"
 echo " If in doubt, please consult https://github.com/zMenta/config-files"
 singleselect yn_result yn_options
 if [[ $yn_result == "yes" ]]; then
@@ -150,6 +150,10 @@ if [[ $yn_result == "yes" ]]; then
 	config_options=("nvim" "doom emacs" "godot" "bashrc" "endeavourOS i3wm")
 	config_defaults=("true" "true" "true" "true" "false")
 	multiselect config_result config_options config_defaults
+
+	printStatus "Clonning config files"
+	git clone --depth 1 https://github.com/zMenta/config-files.git
+	printSucess "done" 
 
 	config_log=("")
     for ((i=0; i<${#config_options[@]}; i++)); do
@@ -172,7 +176,10 @@ if [[ $yn_result == "yes" ]]; then
 				git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 				~/.emacs.d/bin/doom install -!
 				config_log+="Don't forget to run doom sync"
-				printSucess "done, before you doom yourself. Read the above instructions"
+
+				printStatus "Applying doom emacs config"
+				cp -rv $PWD/config-files/.doom.d ~/
+				printSucess "done"
 				;;
 
 			bashrc)
@@ -184,6 +191,7 @@ if [[ $yn_result == "yes" ]]; then
 					'export PATH="$HOME/godot:$PATH"'
 					'export PATH="$HOME/.emacs.d/bin:$PATH"' 
 					)
+					
 					for config in "${bashrc_configs[@]}"; do
 						if grep -Fxq "$config" ~/.bashrc; then
 							printWarning "$config not written. Line already exist in .bashrc"
