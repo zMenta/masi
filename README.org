@@ -1,6 +1,9 @@
 * masi
 Menta's Arch Software Installer
 
+** About
+A basic script to install softwares from a list.
+
 
 ** Installation
 Execute the following commands, it will download the script and execute the script.
