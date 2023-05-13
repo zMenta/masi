@@ -12,6 +12,12 @@
 # Thanks for https://unix.stackexchange.com/questions/146570/arrow-key-enter-menu/673436#673436 making this project possible.
 #
 # ---------------------------------------------------------------------------------------------------------------------------
+#
+# POSSIBLE TODO's
+# - Create on the multiselect a description=("") parameter? -> on print_option $text $description
+#
+
+source ./menu.sh
 
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
@@ -33,15 +39,6 @@ function installOptions {
 
 # Options for yes or no questions
 yn_options=("yes" "no")
-
-### TODO
-# DONE 1 - Single selection menu
-# 2 - Warns that yay is necessary and asks to install it. Check Chris Titus hyprland install
-# DONE 3 - Finish Install
-# 4 - On final selection have the following message "The toggled options are going to be installed, proceed?"
-# 5 - Create on the multiselect a description=("") parameter? -> on print_option $text $description
-
-source ./menu.sh
 
 printStatus "Commands"
 echo "k or up_arrow      => UP"
@@ -162,7 +159,7 @@ if [[ $yn_result == "yes" ]]; then
 		fi 
 
 		case ${config_options[i]} in
-			nvim) echo "nvim WIP";;
+			nvim) echo "nvim apply config not implemented yet";;
 
 			godot) echo "godot"
 				printStatus "Applying godot config"
