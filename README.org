@@ -2,3 +2,10 @@
 Menta's Arch Software Installer
 
 
+** Installation
+Execute the following commands, it will download the script and execute the script.
+
+#+BEGIN_SRC bash
+git clone --depth 1 https://github.com/zMenta/masi.git
+bash ~/masi/main.sh
+#+END_SRC
