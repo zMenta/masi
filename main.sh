@@ -50,7 +50,7 @@ echo
 printStatus "Checking for yay"
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then 
-	printSucess "yay was located, procceding"
+	echo " -> yay was located, procceding"
 else
 	printWarning "yay was NOT located"
 	echo " - Would you like to install yay?"
@@ -159,9 +159,17 @@ if [[ $yn_result == "yes" ]]; then
 		fi 
 
 		case ${config_options[i]} in
-			nvim) echo "nvim apply config not implemented yet";;
+			nvim) 
+				printStatus "Installing nvim.packer"
+				git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+				printSucess "done"
 
-			godot) echo "godot"
+				printStatus "Applying nvim config"
+				cp -rv $PWD/config-files/nvim/ ~/.config
+				printSucess "done"
+				;;
+
+			godot) 
 				printStatus "Applying godot config"
 				mkdir ~/godot
 				mkdir ~/godot/projects
@@ -212,7 +220,7 @@ if [[ $yn_result == "yes" ]]; then
 
 			zellij)
 				printStatus "Applying zellij config"
-				cp -rv $PWD/config-files/zellij ~/.config/
+				cp -rv $PWD/config-files/zellij ~/.config
 				printSucess "done"
 				;;
 
@@ -221,6 +229,7 @@ if [[ $yn_result == "yes" ]]; then
 	
 fi
 
+echo
 echo "-------------------------"
 echo "  Script Complete"
 echo "-------------------------"
