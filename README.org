@@ -5,7 +5,7 @@ Menta's Arch Software Installer
 A basic script to install softwares from a list.
 
 #+attr_html: :alt  :align center :class img
-[[https://user-images.githubusercontent.com/70714721/238153926-c52e0b81-0535-4785-bb60-286947009227.png][look]]
+[[https://user-images.githubusercontent.com/70714721/238153926-c52e0b81-0535-4785-bb60-286947009227.png][installer picture]]
 
 
 ** Installation
