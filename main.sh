@@ -17,7 +17,7 @@
 # - Create on the multiselect a description=("") parameter? -> on print_option $text $description
 #
 
-source "$PWD/menu.sh"
+source ~/masi/menu.sh
 
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
