@@ -172,14 +172,33 @@ if [[ $yn_result == "yes" ]]; then
 				git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 				~/.emacs.d/bin/doom install -!
 				config_log+="Don't forget to run doom sync"
-				printSucess "done"
+				printSucess "done, before you doom yourself. Read the above instructions"
 				;;
 
-			# bashrc)
-			# 	printStatus "";;
+			bashrc)
+				printStatus "Applying bashrc config"
+				if [ -f "$HOME/.bashrc" ]; then
+					echo ".bashrc found, procceding"
+					bashrc_configs=(
+					'alias emacs="emacsclient -c -a '"''"'"'
+					'export PATH="$HOME/godot:$PATH"'
+					'export PATH="$HOME/.emacs.d/bin:$PATH"' 
+					)
+					for config in "${bashrc_configs[@]}"; do
+						if grep -Fxq "$config" ~/.bashrc; then
+							printWarning "$config not written. Line already exist in .bashrc"
+						else
+							sudo echo "$config" >> ~/.bashrc
+							echo " -> Wrote $config in .bashrc" 
+						fi
+					done
+					printSucess "done" 
+				else
+					printError ".bashrc NOT found, .bashrc not applied!."
+				fi 
+				;;
 
 		esac
-
 	done
 	
 fi
