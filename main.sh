@@ -206,6 +206,13 @@ if [[ $yn_result == "yes" ]]; then
 				fi 
 				;;
 
+			"endeavourOS i3wm")
+				printStatus "Applying endeavourOS i3wm config"
+				cp -v $PWD/config-files/endeavourOS_i3wm/config ~/.config/i3/config
+				cp -v $PWD/config-files/endeavourOS_i3wm/i3blocks.conf ~/.config/i3/i3blocks.conf
+				printSucess "done" 
+				;;
+
 		esac
 	done
 	
