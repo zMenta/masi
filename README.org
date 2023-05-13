@@ -1,0 +1,4 @@
+* masi
+Menta's Arch Software Installer
+
+
