@@ -13,5 +13,5 @@ Execute the following commands, it will download the script and execute the scri
 
 #+BEGIN_SRC bash
 git clone --depth 1 https://github.com/zMenta/masi.git
-bash ~/masi/main.sh
+./masi/main.sh
 #+END_SRC
