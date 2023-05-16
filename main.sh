@@ -171,8 +171,8 @@ if [[ $yn_result == "yes" ]]; then
 
 			godot) 
 				printStatus "Applying godot config"
-				mkdir ~/godot
-				mkdir ~/godot/projects
+				mkdir -v ~/godot
+				mkdir -v ~/godot/projects
 				printSucess "done"
 				;;
 
