@@ -188,9 +188,10 @@ if [[ $yn_result == "yes" ]]; then
 				if [ -f "$HOME/.bashrc" ]; then
 					echo ".bashrc found, procceding"
 					bashrc_configs=(
-					'alias emacs="emacsclient -c -a '"''"'"'
 					'export PATH="$HOME/godot:$PATH"'
 					'export PATH="$HOME/.emacs.d/bin:$PATH"' 
+					'alias emacs="emacsclient -c -a '"''"'"'
+					'alias gvim="nvim --listen ./godothost ."'
 					)
 					
 					for config in "${bashrc_configs[@]}"; do
