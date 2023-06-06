@@ -160,10 +160,6 @@ if [[ $yn_result == "yes" ]]; then
 
 		case ${config_options[i]} in
 			nvim) 
-				printStatus "Installing nvim.packer"
-				git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-				printSucess "done"
-
 				printStatus "Applying nvim config"
 				cp -rv $PWD/config-files/nvim/ ~/.config
 				printSucess "done"
