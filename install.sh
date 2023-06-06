@@ -17,7 +17,7 @@
 # - Create on the multiselect a description=("") parameter? -> on print_option $text $description
 #
 
-source ~/masi/menu.sh
+source menu.sh
 
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
@@ -145,11 +145,11 @@ singleselect yn_result yn_options
 if [[ $yn_result == "yes" ]]; then
 	echo " - Select the configurations you want to apply"
 	config_options=("nvim" "zellij" "godot" "doom emacs" "bashrc" "endeavourOS i3wm")
-	config_defaults=("true" "true" "true" "true" "false" "false")
+	config_defaults=("true" "true" "true" "false" "true" "false")
 	multiselect config_result config_options config_defaults
 
 	printStatus "Clonning config files"
-	git clone --depth 1 https://github.com/zMenta/config-files.git
+	git clone --depth 1 https://github.com/zMenta/config-files.git $PWD
 	printSucess "done" 
 
 	config_log=("")
@@ -161,7 +161,7 @@ if [[ $yn_result == "yes" ]]; then
 		case ${config_options[i]} in
 			nvim) 
 				printStatus "Applying nvim config"
-				cp -rv $PWD/config-files/nvim/ ~/.config
+				cp -rv $PWD/config-files/nvim/ ~/.config 
 				printSucess "done"
 				;;
 
@@ -176,7 +176,7 @@ if [[ $yn_result == "yes" ]]; then
 				printStatus "Installing Doom emacs"
 				git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 				~/.emacs.d/bin/doom install -!
-				config_log+="Don't forget to run doom sync"
+				config_log+=("Don't forget to run doom sync")
 
 				printStatus "Applying doom emacs config"
 				cp -rv $PWD/config-files/.doom.d ~/

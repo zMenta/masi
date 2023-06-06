@@ -9,6 +9,7 @@ Execute the following commands, it will download the script and execute the scri
 *Note*: Clone it in your home directory.
 
 ```
-git clone --depth 1 https://github.com/zMenta/masi.git
-./masi/main.sh
+git clone --depth 1 https://github.com/zMenta/masi.git &
+cd masi &
+./install.sh
 ```
