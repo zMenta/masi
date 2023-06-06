@@ -149,7 +149,7 @@ if [[ $yn_result == "yes" ]]; then
 	multiselect config_result config_options config_defaults
 
 	printStatus "Clonning config files"
-	git clone --depth 1 https://github.com/zMenta/config-files.git $PWD
+	git clone --depth 1 https://github.com/zMenta/config-files.git $PWD/config-files
 	printSucess "done" 
 
 	config_log=("")
