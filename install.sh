@@ -144,8 +144,8 @@ echo " If in doubt, please consult https://github.com/zMenta/config-files"
 singleselect yn_result yn_options
 if [[ $yn_result == "yes" ]]; then
 	echo " - Select the configurations you want to apply"
-	config_options=("nvim" "zellij" "godot" "doom emacs" "bashrc" "endeavourOS i3wm")
-	config_defaults=("true" "true" "true" "false" "true" "false")
+	config_options=("nvim" "zellij" "godot" "doom emacs" "bashrc" "endeavourOS i3wm" "polybar")
+	config_defaults=("true" "true" "true" "false" "true" "false" "true")
 	multiselect config_result config_options config_defaults
 
 	printStatus "Clonning config files"
@@ -218,6 +218,12 @@ if [[ $yn_result == "yes" ]]; then
 			zellij)
 				printStatus "Applying zellij config"
 				cp -rv $PWD/config-files/zellij ~/.config
+				printSucess "done"
+				;;
+
+			polybar)
+				printStatus "Applying polybar config"
+				cp -rv $PWD/config-files/polybar ~/.config
 				printSucess "done"
 				;;
 
