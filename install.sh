@@ -89,7 +89,7 @@ multiselect utility_result utility_options utility_default
 
 echo "-- Development --"
 dev_options=("neovim" "vim" "emacs-nativecomp" "vscodium-bin" "godot" "rust")
-dev_defaults=("true" "true" "false" "false" "true" "true")
+dev_defaults=("true" "true" "false" "false" "true" "false")
 multiselect dev_result dev_options dev_defaults
 
 echo "-- Games and Communication --"
@@ -100,13 +100,13 @@ multiselect gc_result gc_options gc_defaults
 echo "-- Multimidia Tools --"
 tool_options=(
     "audacity" "lmms"
-    "obs-studio" 
+    "obs-studio" "kdenlive"
     "krita" "gimp" "aseprite" "pureref" 
     "blender" "blockbench"
     )
 tool_defaults=(
     "false" "false"
-    "true"
+    "true" "false"
     "true" "false" "false" "false"
     "false" "false"
     )
