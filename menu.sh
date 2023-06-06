@@ -1,18 +1,6 @@
 #!/bin/bash
 
-# This is a simple script for installing the softwares I normally use. Using checkboxes for a bit of modularity. 
-# Use it at own risk
-#
-# Requirements:
-# - yay 
-#
-#
-# ---------------------------------------------------------------------------------------------------------------------------
-#
-# Thanks for https://unix.stackexchange.com/questions/146570/arrow-key-enter-menu/673436#673436 making this project possible.
-#
-# ---------------------------------------------------------------------------------------------------------------------------
-
+# Menu scripts
 
 # little helpers for terminal print control and key input
 ESC=$( printf "\033")
