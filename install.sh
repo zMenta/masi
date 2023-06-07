@@ -144,8 +144,8 @@ echo " If in doubt, please consult https://github.com/zMenta/config-files"
 singleselect yn_result yn_options
 if [[ $yn_result == "yes" ]]; then
 	echo " - Select the configurations you want to apply"
-	config_options=("nvim" "zellij" "godot" "doom emacs" "bashrc" "endeavourOS i3wm" "polybar")
-	config_defaults=("true" "true" "true" "false" "true" "false" "true")
+	config_options=("nvim" "zellij" "godot" "doom emacs" "bashrc" "i3" "polybar")
+	config_defaults=("true" "true" "true" "false" "true" "true" "true")
 	multiselect config_result config_options config_defaults
 
 	printStatus "Clonning config files"
@@ -208,10 +208,12 @@ if [[ $yn_result == "yes" ]]; then
 				fi 
 				;;
 
-			"endeavourOS i3wm")
-				printStatus "Applying endeavourOS i3wm config"
-				cp -v $PWD/config-files/endeavourOS_i3wm/config ~/.config/i3/config
-				cp -v $PWD/config-files/endeavourOS_i3wm/i3blocks.conf ~/.config/i3/i3blocks.conf
+			i3)
+				printStatus "Applying i3wm config"
+				cp -v $PWD/config-files/i3/config ~/.config/i3/config
+				printSucess "done" 
+				printStatus "Applying i3wm dependecy config -> Rofi"
+				cp -v $PWD/config-files/rofi/config ~/.config/rofi/config
 				printSucess "done" 
 				;;
 
