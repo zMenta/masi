@@ -99,12 +99,14 @@ multiselect gc_result gc_options gc_defaults
 
 echo "-- Multimidia Tools --"
 tool_options=(
+	"mpv"
     "audacity" "lmms"
     "obs-studio" "kdenlive"
     "krita" "gimp" "aseprite" "pureref" 
     "blender" "blockbench"
     )
 tool_defaults=(
+	"true"
     "false" "false"
     "true" "false"
     "true" "false" "false" "false"
