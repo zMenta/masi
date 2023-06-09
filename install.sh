@@ -212,10 +212,10 @@ if [[ $yn_result == "yes" ]]; then
 
 			i3)
 				printStatus "Applying i3wm config"
-				cp -v $PWD/config-files/i3/config ~/.config/i3/config
+				cp -v $PWD/config-files/i3 ~/.config
 				printSucess "done" 
 				printStatus "Applying i3wm dependecy config -> Rofi"
-				cp -v $PWD/config-files/rofi/config ~/.config/rofi/config
+				cp -v $PWD/config-files/rofi ~/.config
 				printSucess "done" 
 				;;
 
