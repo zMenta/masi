@@ -8,6 +8,7 @@
 
 # Sourcing files
 source menu.sh
+source packages.sh
 
 # Helper Functions
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
@@ -40,7 +41,26 @@ yayCheck() {
 	fi
 }
 
-# Script starts
+install() {
+	echo "--------------------------------------------------------------------------------------"
+	echo "   Installation Began, you might be asked for your sudo password to proceed."
+	echo "--------------------------------------------------------------------------------------"
+
+	for value in "${install_list[@]}"; do
+		printStatus "Installing $value"
+		eval yay -S "$value" --noconfirm
+		printSucess "done"
+	done
+
+	printStatus "Additional setups"
+	packageSetups
+	backlightSetup
+	printSucess "done"
+}
+
+#################
+# Script starts #
+#################
 clear
 printStatus "Welcome to Masi"
 echo
@@ -50,7 +70,11 @@ singleselect result opts
 
 if [ $result == 'Install' ]; then
 	echo "Installation began"
+	printStatus "Updating the system"
+	yay -Syu --noconfirm
+	printSucess "done"
 	yayCheck
+	install
 elif [ $result == 'Update' ]; then
 	echo "Updating with the latest config files"
 else
