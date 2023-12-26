@@ -37,6 +37,7 @@ install_list=(
 	arc-gtk-theme # Gtk Color theme
 	zathura # Document viewer
 	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
+    alacritty # Terminal emulator
 
 	#########
 	# Fonts #
@@ -59,6 +60,8 @@ install_list=(
 	lf # Terminal file manager
 	hledger # Manage your financee
 	hledger-iadd # Easily creates hledger entries
+    zellij # Terminal multiplexer
+    htop-vim # Htop system resources + vim keybinds
 	
 
 	#######
