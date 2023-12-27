@@ -72,14 +72,45 @@ update() {
 	echo "   Updating with the latest config files"
 	echo "--------------------------------------------"
 
+
+    if [ -d $PWD/config-files ]; then
+        printWarning "Config files directory exists"
+        printStatus "Cleaning up..."
+        rm -rdf $PWD/config-files || sendError "Error on removing directory $PWD/config-files, exiting"
+        printSucess "done"
+    fi
+
     printStatus "cloning https://github.com/zMenta/config-files.git"
-	git clone --depth 1 https://github.com/zMenta/config-files.git $PWD/config-files || sendError "Git clone error, exiting"
+	git clone --quiet --depth 1 https://github.com/zMenta/config-files.git $PWD/config-files || sendError "Git clone error, exiting"
+    printSucess "done"
+
+    printStatus "Copying config files to ~/.config"
+    for dir in $PWD/config-files/.config/*; do
+        cp -r $dir ~/.config || sendError "Error on copying $dir config to ~/.config, exiting"
+    done
+    printSucess "done"
+
+    
+    printStatus "Copying .bashrc file"
+    cp $PWD/config-files/.bashrc ~/ || sendError "Error on copying .bashrc file to home directory, exiting"
     printSucess "done"
 
     echo
     echo "Would you like to delete temporary config files?"
     echo " -> masi/config-files"
     singleselect clean_after yn_options
+
+    if [ $clean_after == "yes" ]; then
+        printStatus "Cleaning up..."
+        rm -rdf $PWD/config-files || sendError "Error on removing directory $PWD/config-files, exiting"
+        printSucess "done"
+    fi
+
+    echo
+	echo "---------------------"
+	echo "   Update complete   "
+	echo "---------------------"
+    echo
 }
 
 #################
