@@ -14,7 +14,13 @@ source packages.sh
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
 function printSucess { printf "\e[38;5;46m-- $1 --\e[0m\n"; }
-function printError { printf "\e[38;5;203m-- $1 --\e[0m\n"; }
+function printError { 
+    printf "\e[38;5;203m-- $1 --\e[0m\n";
+    exit
+}
+
+# Helper Variables
+yn_options=("yes" "no")
 
 yayCheck() {
 	printStatus "Checking for yay"
@@ -25,7 +31,6 @@ yayCheck() {
 		printWarning "yay was NOT located"
 		echo " - Would you like to install yay?"
 
-		yn_options=("yes" "no")
 		singleselect yn_result yn_options
 		if [[ $yn_result == "yes" ]]; then
 			printStatus "installing yay"
@@ -36,7 +41,6 @@ yayCheck() {
 			printSucess "done"
 		else
 			printError "yay is required for this script, exiting"
-			exit
 		fi
 	fi
 }
