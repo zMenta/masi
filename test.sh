@@ -14,7 +14,7 @@ source packages.sh
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
 function printStatus { printf "\n\e[38;5;45m-- $1 --\e[0m\n"; }
 function printSucess { printf "\e[38;5;46m-- $1 --\e[0m\n"; }
-function printError { 
+function sendError { 
     printf "\e[38;5;203m-- $1 --\e[0m\n";
     exit
 }
@@ -40,7 +40,7 @@ yayCheck() {
 			cd ..
 			printSucess "done"
 		else
-			printError "yay is required for this script, exiting"
+			sendError "yay is required for this script, exiting"
 		fi
 	fi
 }
