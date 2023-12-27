@@ -52,7 +52,7 @@ install() {
 
 	for value in "${install_list[@]}"; do
 		printStatus "Installing $value"
-		eval yay -S "$value" --noconfirm
+		eval yay -S "$value" --noconfirm || sendError "Error on installing package, exiting"
 		printSucess "done"
 	done
 
@@ -65,6 +65,21 @@ install() {
 	echo "----------------------------"
 	echo "  Installation complete "
 	echo "----------------------------"
+}
+
+update() {
+	echo "--------------------------------------------"
+	echo "   Updating with the latest config files"
+	echo "--------------------------------------------"
+
+    printStatus "cloning https://github.com/zMenta/config-files.git"
+	git clone --depth 1 https://github.com/zMenta/config-files.git $PWD/config-files || sendError "Git clone error, exiting"
+    printSucess "done"
+
+    echo
+    echo "Would you like to delete temporary config files?"
+    echo " -> masi/config-files"
+    singleselect clean_after yn_options
 }
 
 #################
@@ -81,11 +96,11 @@ if [ $result == 'Install' ]; then
 	echo "Installation began"
 	yayCheck
 	printStatus "Updating the system"
-	yay -Syu --noconfirm 
+	yay -Syu --noconfirm || sendError "Error on updating the system, exiting"
 	printSucess "done"
 	install
 elif [ $result == 'Update' ]; then
-	echo "Updating with the latest config files"
+    update
 else
 	echo "See you next time"
 fi
