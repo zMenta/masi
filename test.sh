@@ -130,6 +130,7 @@ if [ $result == 'Install' ]; then
 	yay -Syu --noconfirm || sendError "Error on updating the system, exiting"
 	printSucess "done"
 	install
+    update
 elif [ $result == 'Update' ]; then
     update
 else
