@@ -56,6 +56,11 @@ install() {
 	packageSetups
 	backlightSetup
 	printSucess "done"
+
+    echo 
+	echo "----------------------------"
+	echo "  Installation complete "
+	echo "----------------------------"
 }
 
 #################
@@ -70,10 +75,10 @@ singleselect result opts
 
 if [ $result == 'Install' ]; then
 	echo "Installation began"
-	printStatus "Updating the system"
-	yay -Syu --noconfirm
-	printSucess "done"
 	yayCheck
+	printStatus "Updating the system"
+	yay -Syu --noconfirm 
+	printSucess "done"
 	install
 elif [ $result == 'Update' ]; then
 	echo "Updating with the latest config files"
