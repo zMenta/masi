@@ -4,14 +4,14 @@ install_list=(
 	#############
 	#    Core   #
 	#############
-	base-devel 
+	base-devel # Tools needed for building (compiling and linking)
 	wget # Download from the web
 	unzip # Unzip files
 	xclip # Clipboard manager, nvim yank support
 	networkmanager 
 	i3 # Window manager
-	rofi
-	polybar 
+	rofi # A window switcher, Application launcher and dmenu replacement
+	polybar # Status bar
 	arandr # Allows the user to customize monitor arrangements.
 	ly # TUI Login screen
 	xsecurelock # Lock screen
