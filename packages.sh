@@ -22,7 +22,6 @@ install_list=(
 	pavucontrol # PulseAudio Volume Control
 	alsa-utils # Sound utilities like amixer, change volume with keybinds, etc 
 	mpv # Media Player
-	nvidia-inst # Nvidia driver installer
 	gthumb # Image viewer and quick image edits
 	gvfs # Provides filesystem mounting and trash functionality
 	playerctl # Mpris media player controller and lib
