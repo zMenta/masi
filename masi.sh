@@ -49,6 +49,12 @@ install() {
 	echo "--------------------------------------------------------------------------------------"
 	echo "   Installation Began, you might be asked for your sudo password to proceed."
 	echo "--------------------------------------------------------------------------------------"
+    
+	yayCheck
+
+	printStatus "Updating the system"
+	yay -Syu --noconfirm || sendError "Error on updating the system, exiting"
+	printSucess "done"
 
 	for value in "${install_list[@]}"; do
 		printStatus "Installing $value"
@@ -120,17 +126,14 @@ clear
 printStatus "Welcome to Masi"
 echo
 
-opts=("Install" "Update" "Exit")
+opts=("Full-Setup" "Install" "Update" "Exit")
 singleselect result opts
 
-if [ $result == 'Install' ]; then
-	echo "Installation began"
-	yayCheck
-	printStatus "Updating the system"
-	yay -Syu --noconfirm || sendError "Error on updating the system, exiting"
-	printSucess "done"
-	install
+if [ $result == 'Full-Setup' ]; then
+    install
     update
+elif [ $result == 'Install' ]; then
+	install
 elif [ $result == 'Update' ]; then
     update
 else
