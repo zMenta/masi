@@ -98,7 +98,7 @@ update() {
 
     
     printStatus "Copying .bashrc file"
-    cp $PWD/config-files/.bashrc ~/ || sendError "Error on copying .bashrc file to home directory, exiting"
+    cp $PWD/config-files/bashrc/.bashrc ~/ || sendError "Error on copying .bashrc file to home directory, exiting"
     printSucess "done"
 
     echo
