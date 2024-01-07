@@ -1,7 +1,6 @@
-# masi
-### Menta’s Arch Software Installer
+# masi | Menta’s Arch Software Installer
 
-## Installation
+- Installation
 Execute the following commands, it will download the script and execute the script. 
 
 ```
