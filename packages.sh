@@ -16,26 +16,22 @@ install_list=(
 	ly # TUI Login screen
 	xsecurelock # Lock screen
 	man # Manual pages
-	fzf # Fuzzy finder
-	fd # Faster find command
 	pipewire # Audio manager
 	pavucontrol # PulseAudio Volume Control
 	alsa-utils # Sound utilities like amixer, change volume with keybinds, etc 
 	mpv # Media Player
 	gthumb # Image viewer and quick image edits
-	gvfs # Provides filesystem mounting and trash functionality
+	gvfs # Provides file system mounting and trash functionality
 	playerctl # Mpris media player controller and lib
 	tumbler # Image previewer
 	ffmpegthumbnailer # Enable video thumbnailing
 	thunar # File browser
-	thunar-volman # Automatic management of removeable devices in Thunar.
+	thunar-volman # Automatic management of removable devices in Thunar.
 	thunar-archive-plugin # Manage archives directly in Thunar.
 	file-roller # Create and modify archives | Used for the thunar-archive-plugin
 	xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
 	lxappearance # Be able to modify appearance
 	arc-gtk-theme # Gtk Color theme
-	zathura # Document viewer
-	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
     alacritty # Terminal emulator
 
 	#########
@@ -44,24 +40,32 @@ install_list=(
 	otf-firamono-nerd 
 	noto-fonts # An expansive font package
 	noto-fonts-emoji # Emojis 
-	noto-fonts-cjk # Font support for chinese, japanese and korean characters
+	noto-fonts-cjk # Font support for Chinese, Japanese and Korean characters
 
-
-	##########
-	# Useful #
-	##########
+	##################
+	# Useful Utility #
+	##################
 	rofi-calc # Rofi as calculator
 	ncdu # NCurses Disk Usage, disk utility
-	obsidian # Note taking app
 	bat # Improved cat command
-	mangohud # Game performance overlay
+    zellij # Terminal multiplexer
+	fzf # Fuzzy finder
+	fd # Faster find command
+
+    #########
+    # Tools #
+    #########	
+    neovim # Based text editor
 	sc-im # A terminal excel like spreadsheet editor
 	lf # Terminal file manager
-	hledger # Manage your financee
+	obsidian # Note taking app
+    krita # Drawing and image editing software
+	hledger # Manage your finance
 	hledger-iadd # Easily creates hledger entries
-    zellij # Terminal multiplexer
     htop-vim # Htop system resources + vim keybinds
-	
+	mangohud # Game performance overlay
+	zathura # Document viewer
+	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
 
 	#######
 	# Fun #
