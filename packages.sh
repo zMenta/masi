@@ -6,21 +6,17 @@ install_list=(
 	#############
 	base-devel # Tools needed for building (compiling and linking)
 	wget # Download from the web
-	unzip # Unzip files
-	xclip # Clipboard manager, nvim yank support
-	networkmanager 
+    xclip # Clipboard manager, terminal emulator(using for nvim yank) yank support
+	networkmanager # Manage wires
 	i3 # Window manager
 	rofi # A window switcher, Application launcher and dmenu replacement
 	polybar # Status bar
-	arandr # Allows the user to customize monitor arrangements.
 	ly # TUI Login screen
 	xsecurelock # Lock screen
 	man # Manual pages
 	pipewire # Audio manager
 	pavucontrol # PulseAudio Volume Control
 	alsa-utils # Sound utilities like amixer, change volume with keybinds, etc 
-	mpv # Media Player
-	gthumb # Image viewer and quick image edits
 	gvfs # Provides file system mounting and trash functionality
 	playerctl # Mpris media player controller and lib
 	tumbler # Image previewer
@@ -32,7 +28,6 @@ install_list=(
 	xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
 	lxappearance # Be able to modify appearance
 	arc-gtk-theme # Gtk Color theme
-    alacritty # Terminal emulator
 
 	#########
 	# Fonts #
@@ -45,6 +40,7 @@ install_list=(
 	##################
 	# Useful Utility #
 	##################
+	unzip # Unzip files
 	rofi-calc # Rofi as calculator
 	ncdu # NCurses Disk Usage, disk utility
 	bat # Improved cat command
@@ -58,9 +54,14 @@ install_list=(
     neovim # Based text editor
 	sc-im # A terminal excel like spreadsheet editor
 	lf # Terminal file manager
+	mpv # Media Player
+    alacritty # Terminal emulator
+	arandr # Allows the user to customize monitor arrangements on X
+	gthumb # Image viewer and quick image edits
 	obsidian # Note taking app
     obs-studio # Stream and record videos
     krita # Drawing and image editing software
+    blender # 3D (and much more) modelling software
 	hledger # Manage your finance
 	hledger-iadd # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
