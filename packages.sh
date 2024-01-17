@@ -59,6 +59,7 @@ install_list=(
 	sc-im # A terminal excel like spreadsheet editor
 	lf # Terminal file manager
 	obsidian # Note taking app
+    obs-studio # Stream and record videos
     krita # Drawing and image editing software
 	hledger # Manage your finance
 	hledger-iadd # Easily creates hledger entries
