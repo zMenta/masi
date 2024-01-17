@@ -53,12 +53,12 @@ install() {
 	yayCheck
 
 	printStatus "Updating the system"
-	yay -Syu --noconfirm || sendError "Error on updating the system, exiting"
+	yay -Syu --noconfirm || sendError "Error on system update, exiting"
 	printSucess "done"
 
 	for value in "${install_list[@]}"; do
 		printStatus "Installing $value"
-		eval yay -S "$value" --noconfirm || sendError "Error on installing package, exiting"
+		eval yay -S "$value" --noconfirm || sendError "Error on package install, exiting"
 		printSucess "done"
 	done
 
@@ -119,9 +119,9 @@ update() {
     echo
 }
 
-#################
-# Script starts #
-#################
+################
+# Script start #
+################
 clear
 printStatus "Welcome to Masi"
 echo
@@ -137,5 +137,5 @@ elif [ $result == 'Install' ]; then
 elif [ $result == 'Update' ]; then
     update
 else
-	echo "See you next time"
+	echo "- See you next time -"
 fi
