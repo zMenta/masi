@@ -101,6 +101,11 @@ update() {
     cp $PWD/config-files/bashrc/.bashrc ~/ || sendError "Error on copying .bashrc file to home directory, exiting"
     printSucess "done"
 
+    printStatus "Copying script files to ~/.scripts"
+    mkdir ~/.scripts
+    cp -r $PWD/config-files/scripts ~/.scripts || sendError "Error on copying $dir config to ~/.scripts, exiting"
+    printSucess "done"
+
     echo
     echo "Would you like to delete temporary config files?"
     echo " -> masi/config-files"
