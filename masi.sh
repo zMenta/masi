@@ -91,18 +91,19 @@ update() {
     printSucess "done"
 
     printStatus "Copying config files to ~/.config"
-    for dir in $PWD/config-files/.config/*; do
+    for dir in $PWD/config-files/dotfiles/*; do
         cp -r $dir ~/.config || sendError "Error on copying $dir config to ~/.config, exiting"
     done
     printSucess "done"
-
     
     printStatus "Copying .bashrc file"
     cp $PWD/config-files/bashrc/.bashrc ~/ || sendError "Error on copying .bashrc file to home directory, exiting"
     printSucess "done"
 
     printStatus "Copying script files to ~/.scripts"
-    mkdir ~/.scripts
+    if [ ! -d ~/.scripts ]; then
+        mkdir ~/.scripts
+    fi
     cp -r $PWD/config-files/scripts ~/.scripts || sendError "Error on copying $dir config to ~/.scripts, exiting"
     printSucess "done"
 
