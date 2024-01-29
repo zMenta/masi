@@ -47,6 +47,8 @@ install_list=(
     zellij # Terminal multiplexer
 	fzf # Fuzzy finder
 	fd # Faster find command
+    npm # Sad language package installer
+    stow # Symlink farm manager
 
     #########
     # Tools #
@@ -62,12 +64,14 @@ install_list=(
     obs-studio # Stream and record videos
     krita # Drawing and image editing software
     blender # 3D (and much more) modelling software
+    godot # 2D and 3D game engine
 	hledger # Manage your finance
 	hledger-iadd # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
 	mangohud # Game performance overlay
 	zathura # Document viewer
 	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
+    brave-browser # A decent browser
 
 	#######
 	# Fun #
