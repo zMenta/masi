@@ -72,6 +72,7 @@ install_list=(
 	zathura # Document viewer
 	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
     brave-browser # A decent browser
+    flameshot # Screenshot tool
 
 	#######
 	# Fun #
