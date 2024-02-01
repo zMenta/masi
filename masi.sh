@@ -104,7 +104,9 @@ update() {
     if [ ! -d ~/.scripts ]; then
         mkdir ~/.scripts
     fi
-    cp -r $PWD/config-files/scripts ~/.scripts || sendError "Error on copying $dir config to ~/.scripts, exiting"
+    for file in $PWD/config-files/scripts/*; do
+        cp -r $file ~/.scripts || sendError "Error on copying $file config to ~/.scripts, exiting"
+    done
     printSucess "done"
 
     echo
