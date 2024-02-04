@@ -49,6 +49,7 @@ install_list=(
 	fd # Faster find command
     npm # Sad language package installer
     stow # Symlink farm manager
+    ripgrep # Line oriented search tool
 
     #########
     # Tools #
