@@ -28,6 +28,7 @@ install_list=(
 	xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
 	lxappearance # Be able to modify appearance
 	arc-gtk-theme # Gtk Color theme
+    poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
 
 	#########
 	# Fonts #
