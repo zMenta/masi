@@ -29,6 +29,7 @@ install_list=(
 	lxappearance # Be able to modify appearance
 	arc-gtk-theme # Gtk Color theme
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
+    dunst # A highly configurable and lightweight notification daemon.
 
 	#########
 	# Fonts #
@@ -51,6 +52,9 @@ install_list=(
     npm # Sad language package installer
     stow # Symlink farm manager
     ripgrep # Line oriented search tool
+    yt-dlp # Feature-rich command-line audio/video downloader
+    xdotool # Simulate keyboard input and mouse activity
+    tldr # Too long didn't read man pages
 
     #########
     # Tools #
@@ -74,14 +78,16 @@ install_list=(
 	mangohud # Game performance overlay
 	zathura # Document viewer
 	zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
-    brave-browser # A decent browser
+    # brave-browser # A decent browser
+    firefox # The browser
     flameshot # Screenshot tool
+    syncthing # A continuous file synchronization program
 
 	#######
 	# Fun #
 	#######
 	ani-cli # Watch anime
-	lobster # Watch movies and tv shows
+	# lobster # Watch movies and tv shows    # Commenting out lobster, some issues when downloading package
 	mangal # Read and or download manga
 	steam # The best game library
 	discord # Message and voice chat with friends
