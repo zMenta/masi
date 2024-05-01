@@ -55,6 +55,8 @@ install_list=(
     yt-dlp # Feature-rich command-line audio/video downloader
     xdotool # Simulate keyboard input and mouse activity
     tldr # Too long didn't read man pages
+    mangohud # Game performance overlay
+    gamemode # OS optimisation for games
 
     #########
     # Tools #
@@ -75,7 +77,6 @@ install_list=(
     hledger # Manage your finance
     hledger-iadd # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
-    mangohud # Game performance overlay
     zathura # Document viewer
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
     # brave-browser # A decent browser
