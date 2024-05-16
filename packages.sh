@@ -63,7 +63,6 @@ install_list=(
     #########   
     neovim # Based text editor
     sc-im # A terminal excel like spreadsheet editor
-    lf # Terminal file manager
     yazi # Cool kid's lf [file manager]
     mpv # Media Player
     alacritty # Terminal emulator
