@@ -30,6 +30,7 @@ install_list=(
     arc-gtk-theme # Gtk Color theme
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
     dunst # A highly configurable and lightweight notification daemon.
+	ueberzugpp # Image support in terminal (using for Alacritty)
 
     #########
     # Fonts #
