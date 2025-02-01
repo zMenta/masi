@@ -83,6 +83,7 @@ install_list=(
     firefox-developer-edition # The browser
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
+	qbittorrent # An advanced BitTorrent client
 
     #######
     # Fun #
