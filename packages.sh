@@ -58,6 +58,7 @@ install_list=(
     tldr # Too long didn't read man pages
     mangohud # Game performance overlay
     gamemode # OS optimisation for games
+	zoxide # Smarter cd command
 
     #########
     # Tools #
@@ -105,14 +106,8 @@ packageSetups() {
     # Enable client auto updates | Adds the skip_host_update: true line
     echo "-> Discord"
     echo '{
-          "IS_MAXIMIZED": false,
+          "IS_MAXIMIZED": true,
           "IS_MINIMIZED": false,
-          "WINDOW_BOUNDS": {
-            "x": 1,
-            "y": 27,
-            "width": 1918,
-            "height": 1052
-          },
           "SKIP_HOST_UPDATE": true
         }' > ~/.config/discord/settings.json
 
