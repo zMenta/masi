@@ -81,6 +81,7 @@ install_list=(
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
+	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
     firefox-developer-edition # The browser
     flameshot # Screenshot tool
