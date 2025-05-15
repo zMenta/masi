@@ -59,6 +59,7 @@ install_list=(
     mangohud # Game performance overlay
     gamemode # OS optimisation for games
 	zoxide # Smarter cd command
+	blesh # Bash Line Editor (ble.sh), improved shell interactions
 
     #########
     # Tools #
@@ -85,6 +86,7 @@ install_list=(
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
+	# laigter # Normal map creator from images
 
     #######
     # Fun #
