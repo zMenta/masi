@@ -84,10 +84,17 @@ install_list=(
 	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
     firefox-developer-edition # The browser
+	zen-browser # Relaxed browser
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
 	# laigter # Normal map creator from images
+	
+	###########################
+	# Japanese Language Input #
+	##########################
+	fcitx5-im # Input method framework
+	fcitx5-mozc-ut # Japanese input method
 
     #######
     # Fun #
