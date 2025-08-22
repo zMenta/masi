@@ -65,25 +65,25 @@ install_list=(
     # Tools #
     #########   
     neovim # Based text editor
-    sc-im # A terminal excel like spreadsheet editor
+    # sc-im # A terminal excel like spreadsheet editor
     yazi # Cool kid's lf [file manager]
     mpv # Media Player
     alacritty # Terminal emulator
     arandr # Allows the user to customize monitor arrangements on X
-    gthumb # Image viewer and quick image edits
+    # gthumb # Image viewer and quick image edits
     obsidian # Note taking app
     obs-studio # Stream and record videos
     krita # Drawing and image editing software
     blender # 3D (and much more) modelling software
     godot # 2D and 3D game engine
-    hledger # Manage your finance
-    hledger-iadd # Easily creates hledger entries
+    # hledger # Manage your finance
+    # hledger-iadd # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
 	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
-    firefox-developer-edition # The browser
+    # firefox-developer-edition # The browser
 	zen-browser # Relaxed browser
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
@@ -101,7 +101,7 @@ install_list=(
     #######
     ani-cli # Watch anime
     # lobster # Watch movies and tv shows    # Commenting out lobster, some issues when downloading package
-    mangal # Read and or download manga
+    # mangal # Read and or download manga
     steam # The best game library
     discord # Message and voice chat with friends
 )
