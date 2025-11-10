@@ -89,6 +89,7 @@ install_list=(
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
 	# laigter # Normal map creator from images
+	betterbird-bin # Improved bird email client
 	
 	###########################
 	# Japanese Language Input #
