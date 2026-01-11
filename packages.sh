@@ -76,15 +76,15 @@ install_list=(
     krita # Drawing and image editing software
     blender # 3D (and much more) modelling software
     godot # 2D and 3D game engine
-    # hledger # Manage your finance
-    # hledger-iadd # Easily creates hledger entries
+    # hledger-bin # Manage your finance
+    # hledger-iadd-bin # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
 	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
     # firefox-developer-edition # The browser
-	zen-browser # Relaxed browser
+	zen-browser-bin # Relaxed browser
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
