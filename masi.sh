@@ -34,6 +34,7 @@ yayCheck() {
 		singleselect yn_result yn_options
 		if [[ $yn_result == "yes" ]]; then
 			printStatus "installing yay"
+			sudo pacman -S --needed git base-devel
 			git clone https://aur.archlinux.org/yay.git
 			cd yay
 			makepkg -si --noconfirm
