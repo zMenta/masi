@@ -128,7 +128,7 @@ packageSetups() {
     sudo systemctl enable NetworkManager
 
     echo " -> ly Login Manager"
-    sudo systemctl enable ly.service
+	sudo systemctl enable ly@tty2.service
 }
 
 backlightSetup() {
