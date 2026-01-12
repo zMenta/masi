@@ -71,14 +71,13 @@ install_list=(
     mpv # Media Player
     alacritty # Terminal emulator
     arandr # Allows the user to customize monitor arrangements on X
-    # gthumb # Image viewer and quick image edits
     obsidian # Note taking app
     obs-studio # Stream and record videos
     krita # Drawing and image editing software
     blender # 3D (and much more) modelling software
     godot # 2D and 3D game engine
-    # hledger-bin # Manage your finance
-    # hledger-iadd-bin # Easily creates hledger entries
+    hledger-bin # Manage your finance
+    hledger-iadd-bin # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
@@ -89,8 +88,7 @@ install_list=(
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
-	# laigter # Normal map creator from images
-	betterbird-bin # Improved bird email client
+	laigter # Normal map creator from images
 	
 	###########################
 	# Japanese Language Input #
