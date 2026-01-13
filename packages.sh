@@ -90,6 +90,7 @@ install_list=(
 	qbittorrent # An advanced BitTorrent client
 	laigter # Normal map creator from images
 	kdenlive # Video editing software
+	# musescore # Music notation app
 	
 	###########################
 	# Japanese Language Input #
