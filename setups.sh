@@ -21,6 +21,11 @@ packageSetups() {
 
     echo " -> ly Login Manager"
 	sudo systemctl enable ly@tty2.service
+
+	# User scripts #
+    echo " -> User services"
+	# Checks if the system has the BAT0 battery, if yes, enable the batteryNotification user service
+	[ -e /sys/class/power_supply/BAT0 ] && systemctl --user start batteryNotification.timer && systemctl --user enable batteryNotification.timer
 }
 
 backlightSetup() {
