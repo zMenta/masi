@@ -25,7 +25,8 @@ install_list=(
     thunar # File browser
     thunar-volman # Automatic management of removable devices in Thunar.
     thunar-archive-plugin # Manage archives directly in Thunar.
-    file-roller # Create and modify archives | Used for the thunar-archive-plugin
+	xarchiver # Archive utility, used for Thunar as well
+	unrar # Add the ability to extract rar archives
     xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
     lxappearance # Be able to modify appearance, GTK+ theme switcher
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
