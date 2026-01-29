@@ -28,10 +28,15 @@ install_list=(
     file-roller # Create and modify archives | Used for the thunar-archive-plugin
     xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
     lxappearance # Be able to modify appearance, GTK+ theme switcher
-    arc-gtk-theme # Gtk Color theme
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
     dunst # A highly configurable and lightweight notification daemon.
 	ueberzugpp # Image support in terminal (using for Alacritty)
+
+	#############
+	# GTK Theme	#
+	#############
+	gruvbox-material-gtk-theme-git
+	gruvbox-material-icon-theme-git
 
     #########
     # Fonts #
