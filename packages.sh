@@ -20,8 +20,8 @@ install_list=(
     alsa-utils # Sound utilities like amixer, change volume with keybinds, etc 
     gvfs # Provides file system mounting and trash functionality
     playerctl # Mpris media player controller and lib
-    tumbler # Image previewer
-    ffmpegthumbnailer # Enable video thumbnailing
+    tumbler # Image previewer for Thunar
+    ffmpegthumbnailer # Enable video thumbnailing for thunar
     thunar # File browser
     thunar-volman # Automatic management of removable devices in Thunar.
     thunar-archive-plugin # Manage archives directly in Thunar.
