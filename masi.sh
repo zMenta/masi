@@ -9,6 +9,7 @@
 # Sourcing files
 source menu.sh
 source packages.sh
+source setups.sh
 
 # Helper Functions
 function printWarning { printf "\n\e[38;5;178m-- $1 --\e[0m\n"; }
