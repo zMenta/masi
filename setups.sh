@@ -26,6 +26,9 @@ packageSetups() {
     echo " -> User services"
 	# Checks if the system has the BAT0 battery, if yes, enable the batteryNotification user service
 	[ -e /sys/class/power_supply/BAT0 ] && systemctl --user start batteryNotification.timer && systemctl --user enable batteryNotification.timer
+
+	# Treesitter-cli #
+	cargo install --locked tree-sitter-cli
 }
 
 backlightSetup() {

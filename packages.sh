@@ -67,6 +67,7 @@ install_list=(
     gamemode # OS optimisation for games
 	zoxide # Smarter cd command
 	blesh # Bash Line Editor (ble.sh), improved shell interactions
+	cargo # Rusted crates # Ensuring install of tree-sitter-cli for Nvim treesitter, check setups.sh for tree-sitter-cli installation
 
     #########
     # Tools #
