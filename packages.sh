@@ -108,7 +108,7 @@ install_list=(
 	##########
 	# Guitar #
 	##########
-	# guitarix # Virtual guitar amplifier
+	# guitarix # Virtual guitar amplifier -> cool guide https://gist.github.com/gabrielgcma/1d47dbe01d0d5e8740bb5aa45d4ac78e
 
     #######
     # Fun #
