@@ -105,6 +105,11 @@ install_list=(
 	fcitx5-im # Input method framework
 	fcitx5-mozc-ut # Japanese input method
 
+	##########
+	# Guitar #
+	##########
+	# guitarix # Virtual guitar amplifier
+
     #######
     # Fun #
     #######
