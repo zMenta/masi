@@ -97,7 +97,8 @@ install_list=(
 	qbittorrent # An advanced BitTorrent client
 	laigter # Normal map creator from images
 	kdenlive # Video editing software
-	# musescore # Music notation app
+	# ardour # Open DAW
+	# audacity # Simple audio editor
 	
 	###########################
 	# Japanese Language Input #
@@ -108,8 +109,9 @@ install_list=(
 	##########
 	# Guitar #
 	##########
-	# guitarix # Virtual guitar amplifier -> cool guide https://gist.github.com/gabrielgcma/1d47dbe01d0d5e8740bb5aa45d4ac78e
-	# qpwgraph # A PipeWire Graph Interface, useful to setup input ouput of audio devices, useful with combination of guitarix
+	guitarix # Virtual guitar amplifier -> cool guide https://gist.github.com/gabrielgcma/1d47dbe01d0d5e8740bb5aa45d4ac78e
+	qpwgraph # A PipeWire Graph Interface, useful to setup input ouput of audio devices, useful with combination of guitarix
+	realtime-privileges # In order to ensure a low latency for the current user audio, user must be added to realtime user group
 
     #######
     # Fun #

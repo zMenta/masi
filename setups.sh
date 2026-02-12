@@ -29,6 +29,10 @@ packageSetups() {
 
 	# Treesitter-cli #
 	cargo install --locked tree-sitter-cli
+
+	# Audio setup
+	sudo usermod -a -G realtime $USER
+	sudo usermod -a -G audio $USER
 }
 
 backlightSetup() {
