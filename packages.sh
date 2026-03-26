@@ -26,7 +26,6 @@ install_list=(
     thunar-volman # Automatic management of removable devices in Thunar.
     thunar-archive-plugin # Manage archives directly in Thunar.
 	xarchiver # Archive utility, used for Thunar as well
-	unrar # Add the ability to extract rar archives
     xbindkeys # is a program that allows to bind commands to certain keys or key combinations on the keyboard. Xbindkeys works with multimedia keys and is independent of the window manager and desktop environment.
     lxappearance # Be able to modify appearance, GTK+ theme switcher
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
@@ -51,6 +50,7 @@ install_list=(
     # Useful Utility #
     ##################
     unzip # Unzip files
+	unrar # Add the ability to extract rar archives
     rofi-calc # Rofi as calculator
     ncdu # NCurses Disk Usage, disk utility
     bat # Improved cat command
