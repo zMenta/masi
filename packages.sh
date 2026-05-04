@@ -99,6 +99,7 @@ install_list=(
 	kdenlive # Video editing software
 	# ardour # Open DAW
 	# audacity # Simple audio editor
+	qalculate-gtk
 	
 	###########################
 	# Japanese Language Input #
