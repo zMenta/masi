@@ -9,7 +9,7 @@ install_list=(
     xclip # Clipboard manager, terminal emulator(using for nvim yank) yank support
     networkmanager # Manage wires
     i3 # Window manager
-	autotiling # Autotiles for i3 and sway
+	# autotiling # Autotiles for i3 and sway
     rofi # A window switcher, Application launcher and dmenu replacement
     polybar # Status bar
     ly # TUI Login screen
@@ -31,6 +31,7 @@ install_list=(
     poppler-qt5 # Add support for opening PDF files in Krita (Poppler is a PDF rendering library)
     dunst # A highly configurable and lightweight notification daemon.
 	ueberzugpp # Image support in terminal (using for Alacritty)
+	xf86-input-wacom # Wacom tablet driver
 
 	#############
 	# GTK Theme	#
