@@ -91,8 +91,7 @@ install_list=(
     zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
 	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
-    # firefox-developer-edition # The browser
-	zen-browser-bin # Relaxed browser
+	librewolf # Secure broser
     flameshot # Screenshot tool
     syncthing # A continuous file synchronization program
 	qbittorrent # An advanced BitTorrent client
