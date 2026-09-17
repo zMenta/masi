@@ -100,6 +100,7 @@ install_list=(
 	# ardour # Open DAW
 	# audacity # Simple audio editor
 	qalculate-gtk
+	nsxiv # neo simple X image viewer
 	
 	###########################
 	# Japanese Language Input #
