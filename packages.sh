@@ -52,6 +52,7 @@ install_list=(
     ##################
     unzip # Unzip files
 	unrar # Add the ability to extract rar archives
+	7zip # File archiver with a high compression ratio (yazi zip preview support)
     rofi-calc # Rofi as calculator
     ncdu # NCurses Disk Usage, disk utility
     bat # Improved cat command
@@ -102,7 +103,7 @@ install_list=(
 	# ardour # Open DAW
 	# audacity # Simple audio editor
 	qalculate-gtk
-	nsxiv # neo simple X image viewer
+	nsxiv # (neo) simple X image viewer
 	
 	###########################
 	# Japanese Language Input #
