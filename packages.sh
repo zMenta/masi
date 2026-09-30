@@ -91,7 +91,7 @@ install_list=(
     hledger-iadd-bin # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
-    zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
+	zathura-pdf-poppler # PDF Support based on Poppler 
 	libreoffice-still # Libre office tools
     # brave-browser # A decent browser
 	librewolf # Secure broser
