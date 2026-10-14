@@ -76,6 +76,7 @@ install_list=(
     #########
     # Tools #
     #########   
+	anki # Best retention learning tool
     neovim # Based text editor
     # sc-im # A terminal excel like spreadsheet editor
     yazi # Cool kid's lf [file manager]
@@ -87,8 +88,8 @@ install_list=(
     krita # Drawing and image editing software
     blender # 3D (and much more) modelling software
     godot # 2D and 3D game engine
-    hledger-bin # Manage your finance
-    hledger-iadd-bin # Easily creates hledger entries
+    #hledger-bin # Manage your finance
+    #hledger-iadd-bin # Easily creates hledger entries
     htop-vim # Htop system resources + vim keybinds
     zathura # Document viewer
 	zathura-pdf-poppler # PDF Support based on Poppler 
