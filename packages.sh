@@ -32,6 +32,7 @@ install_list=(
     dunst # A highly configurable and lightweight notification daemon.
 	ueberzugpp # Image support in terminal (using for Alacritty)
 	xf86-input-wacom # Wacom tablet driver
+	brightnessctl # Screen backlight manager
 
 	#############
 	# GTK Theme	#
