@@ -64,6 +64,7 @@ install_list=(
     stow # Symlink farm manager
     ripgrep # Line oriented search tool
     yt-dlp # Feature-rich command-line audio/video downloader
+	gallery-dl # Utility to download images from website galleries.
     xdotool # Simulate keyboard input and mouse activity
     tldr # Too long didn't read man pages
     mangohud # Game performance overlay
